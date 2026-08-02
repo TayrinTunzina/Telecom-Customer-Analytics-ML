@@ -180,6 +180,7 @@ The API accepts customer information and returns a churn prediction.
 - Generates real-time churn predictions
 - Provides interactive API documentation using Swagger UI
 
+---
 
 ### Run API locally
 
@@ -215,6 +216,8 @@ Churn Prediction
 - Input validation using Pydantic models
 - Prediction endpoint for new customer data
 
+---
+
 ### Run API Locally
 
 Install dependencies:
@@ -229,6 +232,7 @@ pip install -r requirements.txt
 ```bash
 uvicorn app.main:app --reload
 ```
+---
 
 ### The API documentation is available at:
 
