@@ -169,77 +169,53 @@ The input data must follow the same format as the original dataset before predic
 
 ## 🚀 API Deployment
 
-The trained churn prediction pipeline was deployed using FastAPI.
-
-The API accepts customer information and returns a churn prediction.
-
-### Features:
-
-- Loads the trained ML pipeline
-- Performs automatic preprocessing
-- Generates real-time churn predictions
-- Provides interactive API documentation using Swagger UI
-
----
-
-### Run API locally
-
-```bash
-cd api
-
-uvicorn main:app --reload
-```
-
----
-
-## 🚀 Deployment with FastAPI
-
-The trained churn prediction model was deployed as a REST API using FastAPI.
-
-The deployment converts the machine learning model into a production-ready service where users can send customer information and receive real-time churn predictions.
+The trained customer churn prediction pipeline is deployed as a REST API using FastAPI. The API accepts customer information, automatically applies the same preprocessing pipeline used during training, and returns a real-time churn prediction. This enables the model to be easily integrated into web applications or other services.
 
 ### API Workflow
+
+```text
 Customer Data
-↓
+      │
+      ▼
 FastAPI Endpoint
-↓
+      │
+      ▼
 Preprocessing Pipeline
-↓
+      │
+      ▼
 Trained ML Model
-↓
+      │
+      ▼
 Churn Prediction
+```
 
 ### Features
 
 - REST API for real-time churn prediction
-- Automated preprocessing using the saved pipeline
-- Input validation using Pydantic models
-- Prediction endpoint for new customer data
-
----
+- Automatic preprocessing using the saved pipeline
+- Input validation with Pydantic
+- Consistent inference using the trained ML pipeline
+- Interactive API documentation with Swagger UI
 
 ### Run API Locally
 
-Install dependencies:
+Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
----
 
-### Start the FastAPI server:
+Start the FastAPI server:
 
 ```bash
 uvicorn app.main:app --reload
 ```
----
 
-### The API documentation is available at:
+Access the interactive API documentation:
 
-```bash
+```text
 http://127.0.0.1:8000/docs
 ```
-
 ---
 
 ## 🔮 Future Improvements
